@@ -30,23 +30,20 @@ public class ManavKasa {
 
         System.out.print("Armut kaç kilo? : ");
         kgArmut = input.nextDouble();
-        total += kgArmut == 0 ? 0 : kgArmut*armut;
 
         System.out.print("Elma kaç kilo? : ");
         kgElma = input.nextDouble();
-        total += kgElma == 0 ? 0 : kgElma*elma;
 
         System.out.print("Domates kaç kilo? : ");
         kgDomates = input.nextDouble();
-        total += kgDomates == 0 ? 0 : kgDomates*domates;
 
         System.out.print("Muz kaç kilo? : ");
         kgMuz = input.nextDouble();
-        total += kgMuz == 0 ? 0 : kgMuz*muz;
 
         System.out.print("Patlıcan kaç kilo? : ");
         kgPatlican = input.nextDouble();
-        total += kgPatlican == 0 ? 0 : kgPatlican*patlican;
+        
+        total = (kgArmut*armut) + (kgElma*elma) + (kgDomates*domates) + (kgMuz*muz) + (kgPatlican*patlican);
 
         System.out.println("Toplam Tutar: "+total+ " TL");
     }
