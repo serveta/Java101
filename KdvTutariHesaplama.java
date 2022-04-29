@@ -7,7 +7,7 @@ public class KdvTutariHesaplama {
         double fiyat, kdvOrani, kdvTutari, kdvliTutar;
 
         System.out.print("Ürünün fiyatını giriniz: ");
-        fiyat = input.nextInt();
+        fiyat = input.nextDouble();
 
         kdvOrani = fiyat > 0 && fiyat <= 1000 ? 0.18 : 0.08;
 
