@@ -36,13 +36,16 @@ public class UcSayiyiKucuktenBuyugeSirala {
             } else {
                 System.out.println(b + " < " + c + " < " + a);
             }
-        } else {
+        } else if (c < a && c < b) {
             // c sayısı en küçüktür
             if (a < b) {
                 System.out.println(c + " < " + a + " < " + b);
             } else {
                 System.out.println(c + " < " + b + " < " + a);
             }
+        } else {
+            System.out.println("Sayılarda eşitlik söz konusu.");
+            // eşitlik söz konusu iken hangi sayılar arasında eşitlik var ise burada koşullarla belirtilebilir...
         }
 
     }
