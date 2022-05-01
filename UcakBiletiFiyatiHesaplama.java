@@ -1,4 +1,3 @@
-package Projeler;
 /*
 Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı yapın.
 Kullanıcıdan Mesafe (KM), yaşı ve yolculuk tipi (Tek Yön, Gidiş-Dönüş) bilgilerini alın.
@@ -19,7 +18,7 @@ public class UcakBiletiFiyatiHesaplama {
         Scanner input = new Scanner(System.in);
 
         int km, age, tripType;
-        double price = 0, discountPrice, mesafeBasiUcret = 0.10;
+        double price = 0, mesafeBasiUcret = 0.10;
         boolean isError = false;
 
         System.out.print("Mesafe (KM): ");
