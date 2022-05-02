@@ -29,9 +29,14 @@ public class DongulerleElmas {
         int N, select;
         String X = "";
 
-        System.out.print("Elmas büyüklüğü kaç birim olsun: ");
-        N = input.nextInt();
-
+        do {
+            System.out.print("Elmas büyüklüğü kaç birim olsun: ");
+            N = input.nextInt();
+            if(N<=1){
+                System.out.println("Lütfen 1'den büyük bir sayı giriniz.");
+            }
+        }while(N<=1);
+        
         do {
             System.out.println("Elmas hangi şekil ile basılsın: ");
             System.out.print("0 => 0\n1 => *\n2 => -\n3 => x\n Seçiminiz: ");
