@@ -20,6 +20,22 @@ import java.util.Scanner;
 
 public class DeseneGoreMetot {
 
+    /*
+    
+    Ben çok karmaşık düşünmüşüm, ödevimi paylaştıktan sonra diğer ödevleri incelerken şunu fark ettim ve aslında
+    mantığın sandığım kadar zor olmadığını fark ettim :)
+    
+    static void desen(int sayi){
+        if(sayi<=0){
+            System.out.print(" " + sayi);
+            return;
+        }
+        System.out.print(" " +sayi);
+        metotOlusturma(sayi - 5);
+        System.out.print(" " + sayi);
+
+    }
+    */
     static int desen(int num, int count, int tempCount) {
 
         System.out.print(num + " ");
