@@ -47,11 +47,14 @@ public class App {
         fiz.printTeacher();
         kim.printTeacher();
 
-        st1.addBulkExamNote(50,79,88);
+        st1.addBulkExamNote(100,100,100);
+        st1.addBulkPerformNote(50,50,50);
         st1.isPass();
-        st2.addBulkExamNote(50,7,10);
+        st2.addBulkExamNote(100,100,100);
+        st2.addBulkPerformNote(10,10,10);
         st2.isPass();
         st3.addBulkExamNote(50,47,30);
+        st3.addBulkPerformNote(15,15,15);
         st3.isPass();
 
     }

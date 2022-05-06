@@ -37,6 +37,20 @@ public class Student {
 
     }
 
+    public void addBulkPerformNote(int matematikPerform, int fizikPerform, int kimyaPerform) {
+        if (matematikPerform >= 0 && matematikPerform <= 100) {
+            this.matematik.performNote = matematikPerform;
+        }
+
+        if (fizikPerform >= 0 && fizikPerform <= 100) {
+            this.fizik.performNote = fizikPerform;
+        }
+
+        if (kimyaPerform >= 0 && kimyaPerform <= 100) {
+            this.kimya.performNote = kimyaPerform;
+        }
+    }
+
     public void isPass() {
         if (this.matematik.note == 0 || this.fizik.note == 0 || this.kimya.note == 0) {
             System.out.println("Notlar tam olarak girilmemiş");
@@ -55,7 +69,11 @@ public class Student {
 
 
     private void calcAvarage() {
-        this.avarage = (this.fizik.note + this.kimya.note + this.matematik.note) / 3;
+        this.avarage = (
+                (((this.fizik.note)*0.80)+((this.fizik.performNote)*0.20)) +
+                (((this.kimya.note)*0.80)+(this.kimya.performNote)*0.20) +
+                (((this.matematik.note)*0.80)+(this.matematik.performNote)*0.20)
+        ) / 3;
     }
 
     private boolean isCheckPass() {
@@ -66,9 +84,9 @@ public class Student {
     private void printNote() {
         System.out.println("=========================");
         System.out.println("Öğrenci : " + this.name);
-        System.out.println("Matematik Notu : " + this.matematik.note);
-        System.out.println("Fizik Notu : " + this.fizik.note);
-        System.out.println("Kimya Notu : " + this.kimya.note);
+        System.out.println("Matematik Sınav & Sözlü Notu : " + this.matematik.note + " | " + this.matematik.performNote);
+        System.out.println("Fizik Sınav & Sözlü Notu : " + this.fizik.note + " | " + this.fizik.performNote);
+        System.out.println("Kimya Sınav & Sözlü Notu : " + this.kimya.note + " | " + this.kimya.performNote);
     }
 
 }
